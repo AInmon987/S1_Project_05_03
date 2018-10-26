@@ -1,0 +1,129 @@
+@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, 7th Edition
+   Tutorial 3
+   Case Problem 3
+   
+   Layout Style Sheet for A Soldier's Scrapbook
+   Author: Austin Inmon
+   Date: 10.25.18
+   
+   Filename: ss_layout.css
+
+*/
+
+
+/* Article Styles */
+
+/* The rule is for the article and everything in the article is floated to the left and the scale of the width is three hundred and eighty four pixels.  */
+article {
+    float: left;
+    width: 384px;
+}
+
+
+
+
+/* First Line and Drop Cap Styles */
+/* The rule is for the first line of the first paragraph and the has small caps on the first line of the paragraph.  */
+article>p:first-of-type::first-line {
+    font-size: 1.25em;
+    font-variant: small-caps;
+}
+
+/* This rule is for the first letter of the first paragraph and its floated left, line hieght of .8em, the margins are right/bottom 5 pixels. */
+article>p:first-of-type::first-letter {
+    font-size: 4em;
+    float: left;
+    line-height: 0.8em;
+    margin: 0px 5px 5px 0px;
+}
+
+
+
+
+/* Aside Styles */
+/* The rule is for the aside and the content thats in the aside is floated left and the browser range wide is seven hundred and sixty eight pixels.  */
+aside {
+    float: left;
+    width: 768px;
+}
+
+
+
+/* Map Styles */
+/* The rule is for th interactive map and its in the div that has a id of battleMap. the positioning is relative and the top bottom margins are twenty pixels. by doing so, causes the map to center.  */
+div#battleMap {
+    position: relative;
+    width: 688px;
+    margin: 20px auto 20px auto;
+}
+
+/* The actual map is in the img element that has a id of mapInfo and is displayed in block.  */
+img#mapimage {
+    display: block;
+    width: 100%;
+}
+
+
+/* Interactive Map Styles */
+
+/* The rule is for the content thats in the id marker1 and the positioning is absolute, the coordinates are 220 and 340. */
+#marker1 {
+    position: absolute;
+    top: 220px;
+    left: 340px;
+}
+
+/* The rule is for the content thats in the id marker1 and the positioning is absolute, the coordinates are 194 and 358. */
+#marker2 {
+    position: absolute;
+    top: 194px;
+    left: 358px;
+}
+
+/* The rule is for the content thats in the id marker1 and the positioning is absolute, the coordinates are 202 and 400. */
+#marker3 {
+    position: absolute;
+    top: 202px;
+    left: 400px;
+}
+
+/* The rule is for the content thats in the id marker1 and the positioning is absolute,
+/* the coordinates are 217 and 452.  */
+#marker4 {
+    position: absolute;
+    top: 217px;
+    left: 452px;
+}
+
+/* The rule is for the content thats in the id marker1 and the positioning is absolute,
+the coordinates are 229 and 498.  */
+#marker5 {
+    position: absolute;
+    top: 229px;
+    left: 498px;
+}
+
+/* The rule is for the content thats in the id marker1 and the positioning is absolute,
+the coordinates are 246 and 544.  */
+#marker6 {
+    position: absolute;
+    top: 246px;
+    left: 544px;
+}
+
+
+
+/* Map Information Styles */
+
+/* This rule is to hide the information thats on the map.  */
+div.mapInfo {
+    display: none;
+}
+
+/* This rule is to make the points on the map to hover and to have the infomation to show up when the mosue hovers the certain points.  */
+.battleMarkers:hover+div.mapInfo {
+    display: block;
+}
